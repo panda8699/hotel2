@@ -48,19 +48,24 @@
                                         </td> -->
 
                                         <td>
-                                            <button type="button" class="btn btn-sm btn-primary edit-device-button"
-                                                data-mac="<?php echo html_escape($type->smart_lock_mac); ?>"
-                                                data-url="<?php echo html_escape($type->esp32_url); ?>"
-                                                data-floorplanid="<?php echo html_escape($type->floorplanid); ?>">
-                                                Edit
-                                            </button>
-                                            <button type="button" class="btn btn-sm btn-primary edit-device-button-1"
-                                                data-mac="<?php echo html_escape($type->smart_lock_mac); ?>"
-                                                data-url="<?php echo html_escape($type->esp32_url); ?>"
-                                                data-floorplanid="<?php echo html_escape($type->floorplanid); ?>">
-                                                Edit Device
-                                            </button>
+                                            <?php if ($this->permission->method('room_setting', 'update')->access()): ?>
+                                                <button type="button" class="btn btn-sm btn-primary edit-device-button"
+                                                    data-mac="<?php echo html_escape($type->smart_lock_mac); ?>"
+                                                    data-url="<?php echo html_escape($type->esp32_url); ?>"
+                                                    data-floorplanid="<?php echo html_escape($type->floorplanid); ?>">
+                                                    Edit
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-primary edit-device-button-1"
+                                                    data-mac="<?php echo html_escape($type->smart_lock_mac); ?>"
+                                                    data-url="<?php echo html_escape($type->esp32_url); ?>"
+                                                    data-floorplanid="<?php echo html_escape($type->floorplanid); ?>">
+                                                    Edit Device
+                                                </button>
+                                            <?php endif; ?>
+                                            
+                                            
                                         </td>
+
 
 
                                     </tr>

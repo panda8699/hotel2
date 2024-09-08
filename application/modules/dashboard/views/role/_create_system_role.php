@@ -29,7 +29,7 @@
                 <?php $m = 0; ?>
                 <?php foreach ($modules as $value) { 
                 $menu_item = $this->db->select('*')->from('sec_menu_item')->where('module',$value->module)->get()->result();
-                    ?>
+                   ?>
                 <input type="hidden" name="module[]" value="<?php echo $value->module;?>">
                 <table class="table table-bordered table-hover" id="RoleTbl">
                     <h2><?php echo display($value->module)?></h2>
