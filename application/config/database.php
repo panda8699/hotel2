@@ -7,9 +7,9 @@ $active_record = TRUE;//ci version 3.1.11
 
 $db['default'] = array(
     'dsn' => '',
-    'hostname' => 'localhost',
-    'username' => 'root',
-    'password' => '',
+    'hostname' => 'hoteldb.mysql.database.azure.com',
+    'username' => 'tthanhtung92',
+    'password' => 'tthanhtung92',
     'database' => 'hotel',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
